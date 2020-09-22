@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.gcast</groupId>
-	<artifactId>gcastminiosdk</artifactId>
+	<artifactId>gcastminio</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>gcastminiosdk</name>
+	<name>gcastminio</name>
 	<description>Demo project for SDK with MinIO</description>
 
 	<properties>
@@ -19,6 +19,11 @@
 	</properties>
 
 	<dependencies>
+		<dependency>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>aws-java-sdk-s3</artifactId>
+			<version>1.11.858</version>
+		</dependency>
 		<dependency>
 			<groupId>io.minio</groupId>
 			<artifactId>minio</artifactId>

@@ -1,10 +1,10 @@
-package com.gcast.gcastminiosdk;
+package com.gcast.gcastminio;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class GcastminiosdkApplicationTests {
+class GcastminioApplicationTests {
 
 	@Test
 	void contextLoads() {

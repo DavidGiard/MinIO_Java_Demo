@@ -1,4 +1,4 @@
-package com.gcast.gcastminiosdk.services;
+package com.gcast.gcastminio.services;
 
 import java.io.IOException;
 import java.security.InvalidKeyException;
