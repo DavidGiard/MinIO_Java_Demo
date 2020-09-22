@@ -17,9 +17,8 @@ public class GcastminioApplication {
 			throws InvalidKeyException, IllegalArgumentException, NoSuchAlgorithmException, IOException {
 		ApplicationContext applicationContext = SpringApplication.run(GcastminioApplication.class, args);
 
-		String fileName = "test.txt";
 		MinioComponent minIOComponent = applicationContext.getBean(MinioComponent.class);
-		minIOComponent.ReadWriteMinIo(fileName);
+		minIOComponent.ReadWriteMinIo();
 
 		System.out.println ("Done");
 	}

@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import io.minio.BucketExistsArgs;
@@ -16,11 +17,17 @@ import io.minio.errors.MinioException;
 @Service
 public class MinIOService {
 
-    final static String endPoint = "http://127.0.0.1:9000";
-    final static String accessKey = "myaccesskey";
-    final static String secretKey = "mysecretkey";
-    final static String bucketName = "mybucket";
-    final static String localFileFolder = "C:\\test\\files\\";
+    // The following are set in application.properties
+    @Value("${minio.endPoint}")
+    private String endPoint;
+    @Value("${minio.accessKey}")
+    private String accessKey;
+    @Value("${minio.secretKey}")
+    private String secretKey;
+    @Value("${minio.bucketName}")
+    private String bucketName;
+    @Value("${localFileFolder}")
+    private String localFileFolder;
 
     public void WriteToMinIO(String fileName)
             throws InvalidKeyException, IllegalArgumentException, NoSuchAlgorithmException, IOException {

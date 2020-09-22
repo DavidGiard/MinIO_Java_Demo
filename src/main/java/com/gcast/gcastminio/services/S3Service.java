@@ -48,7 +48,7 @@ public class S3Service {
 
     public void UploadWithS3Client(String fileName) throws IOException {
         AmazonS3 s3Client = getAmazonS3Client(accessKey, secretKey, endPoint);
-        String fileToUpload = localFileFolder + "test.txt";
+        String fileToUpload = localFileFolder + fileName;
         try {
             File file = new File(fileToUpload);
 
